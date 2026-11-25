@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#17251d">
+<title>Hearthwild — A little life, grown slowly</title><meta name="description" content="A cozy original pixel-art farming adventure in the valley of Hearthwild."><link rel="stylesheet" href="game.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar"><div class="brand-mark">✿</div><div class="brand"><strong>HEARTHWILD</strong><span>A LITTLE LIFE, GROWN SLOWLY</span></div><div class="top-spacer"></div><div class="weather-pill"><span id="weatherIcon">☀</span><span id="weatherText">Clear skies</span></div><button class="icon-btn" id="soundBtn" aria-label="Toggle sound">♫</button><button class="icon-btn" id="saveBtn" aria-label="Save game">⌑</button></header>
+  <main class="layout">
+    <section class="play-column"><div class="scene-wrap"><canvas id="game" width="640" height="400" aria-label="Hearthwild game world"></canvas><div class="scene-vignette"></div><div class="location-tag"><span class="location-dot"></span><span id="locationName">Mosslight Farm</span></div><div class="toast" id="toast"></div><div class="scene-hint" id="sceneHint">WASD / arrows to wander <i>·</i> E to interact</div>
+      <div class="mobile-controls"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div><button class="mobile-action" id="mobileTool">USE</button><button class="mobile-action" id="mobileAction">ACT</button></div>
+    </div>
+    <div class="bottom-bar"><div class="tool-label"><span class="tiny-label">ACTIVE TOOL</span><strong id="toolName">Watering Can</strong></div><div class="hotbar" id="hotbar"></div><div class="energy-wrap"><div class="energy-label"><span>✦ ENERGY</span><b id="energyText">100 / 100</b></div><div class="energy-track"><i id="energyFill"></i></div></div></div>
+    <div class="help-row"><span><kbd>WASD</kbd> move</span><span><kbd>SPACE</kbd> use tool</span><span><kbd>E</kbd> talk / interact</span><span><kbd>I</kbd> bag</span><span><kbd>ESC</kbd> close</span></div>
+    </section>
+    <aside class="side-panel"><section class="day-card"><div><div class="eyebrow" id="seasonLabel">SPRING · YEAR 1</div><div class="day-title" id="dayLabel">Day 1</div></div><div class="clock"><span class="sun-symbol">◷</span><strong id="timeLabel">6:00 AM</strong></div></section>
+      <section class="wallet-row"><div class="wallet-icon">◈</div><div><small>POCKET MONEY</small><strong><span id="goldLabel">240</span> <em>g</em></strong></div><button class="calendar-btn" id="calendarBtn" title="Calendar & journal">▦</button></section>
+      <div class="panel-tabs"><button class="tab active" data-tab="journal">TODAY</button><button class="tab" data-tab="people">PEOPLE</button><button class="tab" data-tab="craft">CRAFT</button></div>
+      <div class="tab-content" id="tabContent"></div>
+      <div class="side-footer"><span class="save-dot"></span><span id="saveStatus">All progress saved locally</span></div>
+    </aside>
+  </main>
+  <footer class="footer"><span>✿ Hearthwild Valley</span><span>Find a rhythm. Make a home.</span></footer>
+</div>
+<div class="modal-backdrop hidden" id="modal"><div class="modal-card" id="modalCard"></div></div>
+<script src="game.js"></script>
+</body></html>
